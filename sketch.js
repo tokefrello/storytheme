@@ -4,3 +4,13 @@ function setup() {
 
 function draw() {
 }
+
+//Figure class
+function Figure() {
+
+	this.move = function() {
+	}
+	
+	this.display = function() {
+	}
+};
