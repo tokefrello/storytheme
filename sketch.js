@@ -3,21 +3,25 @@
 //initialize GUI
 //initialize sounds
 
-var f;
+var figures = [];
 
 function setup() {
 	createCanvas(displayWidth, displayHeight);
 
 	//populate Figures array
 	f = new Figure();
+	for (var i = 0; i < 10; i++) {
+		figures.push(new Figure());
+	}
 }
 
 function draw() {
 	background(0, 0, 255);
 	//update Figures
-	f.move();
-	//display Figures
-	f.display();
+	for (var i = 0; i < 10; i++) {
+		figures[i].move();
+		figures[i].display();
+	}
 	//play sounds
 	//make GUI operations
 }
