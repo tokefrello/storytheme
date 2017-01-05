@@ -19,10 +19,10 @@ function draw() {
 
 //Figure class
 function Figure() {
-	//location vector
-	//velocity vector
-	//color
-	//size
+	this.loc = createVector(random(width), random(height));
+	this.vel = createVector(random(-1, 1), random(-1, 1));
+	this.color = color(255);
+	this.size = random(4, 8);
 
 	this.move = function() {
 		//update velocity
