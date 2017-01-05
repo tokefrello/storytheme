@@ -27,7 +27,7 @@ function Figure() {
 	this.move = function() {
 	}
 
-	this.checkBoundaries() {
+	this.checkBoundaries = function() {
 		if (this.loc.x > width+this.size/2) {
       		this.loc.x = -this.size/2;
     	}
