@@ -3,16 +3,21 @@
 //initialize GUI
 //initialize sounds
 
+var f;
+
 function setup() {
 	createCanvas(displayWidth, displayHeight);
 
 	//populate Figures array
+	f = new Figure();
 }
 
 function draw() {
 	background(0, 0, 255);
 	//update Figures
+	f.move();
 	//display Figures
+	f.display();
 	//play sounds
 	//make GUI operations
 }
@@ -26,6 +31,7 @@ function Figure() {
 
 	this.move = function() {
 		this.loc.add(this.vel);
+		this.checkBoundaries();
 	}
 
 	this.checkBoundaries = function() {
