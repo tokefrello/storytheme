@@ -25,9 +25,21 @@ function Figure() {
 	this.size = random(4, 8);
 
 	this.move = function() {
-		//update velocity
-		//update location
-		//check for boundaries
+	}
+
+	this.checkBoundaries() {
+		if (this.loc.x > width+this.size/2) {
+      		this.loc.x = -this.size/2;
+    	}
+    	if (this.loc.x < 0-this.size/2) {
+      		this.loc.x = width+this.size/2;
+    	}
+    	if (this.loc.y > height+this.size/2) {
+      		this.loc.y = -this.size/2;
+    	}
+    	if (this.loc.y < 0-this.size/2) {
+      		this.loc.y = height+this.size/2;
+    	}
 	}
 	
 	this.display = function() {
