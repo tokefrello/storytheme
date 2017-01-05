@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-	//background color
+	background(0, 0, 255);
 	//update Figures
 	//display Figures
 	//play sounds
@@ -25,6 +25,7 @@ function Figure() {
 	this.size = random(4, 8);
 
 	this.move = function() {
+		this.loc.add(this.vel);
 	}
 
 	this.checkBoundaries = function() {
@@ -43,7 +44,7 @@ function Figure() {
 	}
 	
 	this.display = function() {
-		//register colors
-		//display shape
+		fill(this.color);
+		ellipse(this.loc.x, this.loc.y, this.size, this.size);
 	}
 };
